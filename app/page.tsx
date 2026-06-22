@@ -10,8 +10,14 @@ export default function Home() {
     <>
       <Hero />
       <CredibilityStrip />
-      <CategoryGrid />
-      <LocationPreview />
+      <div className="flex flex-col">
+        <div className="order-2 md:order-1">
+          <CategoryGrid />
+        </div>
+        <div className="order-1 md:order-2">
+          <LocationPreview />
+        </div>
+      </div>
       <AboutPreview />
       <ContactCTA />
     </>

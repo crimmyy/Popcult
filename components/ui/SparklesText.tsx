@@ -10,38 +10,54 @@ type SparklesTextProps = {
 };
 
 const sparkles = [
-  { id: "one", left: "4%", top: "8%", color: "#ffe200", delay: 0, scale: 0.7 },
+  { id: "one", left: "-2%", top: "-8%", color: "#ffe200", delay: 0, scale: 0.9 },
   {
     id: "two",
-    left: "29%",
-    top: "-5%",
+    left: "22%",
+    top: "-14%",
     color: "#7621c5",
     delay: 0.55,
-    scale: 0.45,
+    scale: 0.72,
   },
   {
     id: "three",
-    left: "57%",
-    top: "4%",
+    left: "48%",
+    top: "-4%",
     color: "#ffe200",
     delay: 1.1,
-    scale: 0.55,
+    scale: 0.82,
   },
   {
     id: "four",
-    left: "82%",
-    top: "28%",
+    left: "78%",
+    top: "6%",
     color: "#7621c5",
     delay: 0.3,
-    scale: 0.65,
+    scale: 0.9,
   },
   {
     id: "five",
-    left: "68%",
-    top: "77%",
+    left: "91%",
+    top: "50%",
     color: "#ffe200",
     delay: 1.45,
-    scale: 0.4,
+    scale: 0.7,
+  },
+  {
+    id: "six",
+    left: "60%",
+    top: "76%",
+    color: "#7621c5",
+    delay: 0.8,
+    scale: 0.76,
+  },
+  {
+    id: "seven",
+    left: "9%",
+    top: "68%",
+    color: "#ffe200",
+    delay: 1.75,
+    scale: 0.68,
   },
 ] as const;
 
@@ -58,12 +74,20 @@ export function SparklesText({
             <motion.svg
               key={sparkle.id}
               aria-hidden="true"
-              className="pointer-events-none absolute z-20 size-5"
+              className="pointer-events-none absolute z-20 size-8"
               style={{ left: sparkle.left, top: sparkle.top }}
-              initial={{ opacity: 0, scale: 0, rotate: 75 }}
+              initial={{
+                opacity: 0.35,
+                scale: sparkle.scale * 0.6,
+                rotate: 75,
+              }}
               animate={{
-                opacity: [0, 0.9, 0],
-                scale: [0, sparkle.scale, 0],
+                opacity: [0.35, 0.95, 0.2],
+                scale: [
+                  sparkle.scale * 0.6,
+                  sparkle.scale,
+                  sparkle.scale * 0.45,
+                ],
                 rotate: [75, 120, 150],
               }}
               transition={{

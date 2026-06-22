@@ -8,25 +8,28 @@ import { SparklesText } from "@/components/ui/SparklesText";
 export function Hero() {
   return (
     <section className="bg-background">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.35fr_0.65fr] lg:gap-16 lg:px-8 lg:py-16">
+      <div className="mx-auto grid max-w-7xl items-center gap-7 px-4 py-8 sm:gap-10 sm:px-6 sm:py-14 lg:grid-cols-[1.35fr_0.65fr] lg:gap-16 lg:px-8 lg:py-16">
         <div className="max-w-3xl">
-          <p className="mb-4 text-sm font-black uppercase tracking-[0.19em] text-primary">
+          <p className="mb-4 hidden text-sm font-black uppercase tracking-[0.19em] text-primary sm:block">
             Anime, collectibles, and gifts in-store
           </p>
           <h1
-            aria-label="Find your next favorite."
-            className="text-[clamp(3.7rem,8vw,7.35rem)] font-black leading-[0.96] tracking-[-0.068em] text-foreground"
+            aria-label="Find your next favorite thing."
+            className="text-[clamp(3.55rem,8vw,7.35rem)] font-black leading-[0.99] tracking-[-0.068em] text-foreground sm:leading-[1.015]"
           >
             Find your
+            <span className="mt-1 block sm:mt-2">
+              next favorite
+            </span>
             <span className="block">
-              next <SparklesText>favorite</SparklesText>.
+              <SparklesText>thing</SparklesText>.
             </span>
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+          <p className="mt-6 hidden max-w-3xl text-lg leading-8 text-muted-foreground sm:block sm:text-xl">
             Anime, Gundam, Sanrio, figures, plush, collectibles, and gifts
             across {locationCount} locations in the Southeast.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
             <Button
               asChild
               size="lg"
@@ -50,7 +53,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-black/15 pt-5">
+          <div className="mt-8 hidden flex-wrap items-center gap-x-5 gap-y-2 border-t border-black/15 pt-5 sm:flex">
             <p className="text-lg font-black">
               {locationCount} locations across {stateCount} states
             </p>

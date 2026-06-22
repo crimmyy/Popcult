@@ -20,11 +20,8 @@ export function CategoryCard({ category }: { category: Category }) {
         <h3 className="text-4xl font-black leading-none tracking-[-0.055em]">
           {category.name}
         </h3>
-        <p className="mt-3 max-w-sm text-sm leading-6 text-white/75">
-          {category.description}
-        </p>
         <ul
-          className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs font-bold uppercase tracking-[0.08em] text-[#ffe200]"
+          className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs font-bold uppercase tracking-[0.08em] text-[#ffe200]"
           aria-label={`${category.name} products`}
         >
           {category.items.map((item) => (
